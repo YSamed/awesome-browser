@@ -1,0 +1,125 @@
+name: Add Entry
+description: Suggest a new tool, browser, extension, or resource for the awesome-browser list.
+title: "Add entry: "
+labels:
+  - add-entry
+  - needs-review
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: The name of the tool, browser, extension, or resource.
+      placeholder: e.g., qutebrowser
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Official website or repository URL.
+      placeholder: e.g., https://www.qutebrowser.org/
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which section of the README should this entry go in?
+      options:
+        - Browsers -> Mainstream Open Source
+        - Browsers -> Privacy-Focused
+        - Browsers -> Chromium-Based
+        - Browsers -> Firefox/Gecko-Based
+        - Browsers -> WebKit-Based
+        - Browsers -> Keyboard/Vim-Like
+        - Browsers -> Minimal & Experimental
+        - Browsers -> Mobile
+        - Browsers -> Terminal & TUI
+        - Browser Engines
+        - Browser Extensions -> Privacy & Security
+        - Browser Extensions -> Developer Tools
+        - Browser Extensions -> Reading & Research
+        - Browser Extensions -> Productivity
+        - Browser Extensions -> UI Customization
+        - Developer Tools -> Cross-Browser Testing
+        - Developer Tools -> Responsive Design
+        - Developer Tools -> Accessibility
+        - Developer Tools -> Performance
+        - Developer Tools -> Debugging
+        - Automation & Testing
+        - Bookmarking, Tabs & Sessions
+        - Academic & Research Tools
+        - Browser Learning Resources
+        - Unmaintained, Archived & Historical
+        - Related Awesome Lists
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear, factual description of the tool. Avoid marketing language.
+      placeholder: e.g., Keyboard-driven browser with Vim-like bindings.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: license
+    attributes:
+      label: License / Pricing
+      description: What is the license or pricing model?
+      options:
+        - Open Source
+        - Free
+        - Freemium
+        - Paid
+        - Proprietary
+    validations:
+      required: true
+
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      description: Which platforms does it support? Use commas for multiple.
+      placeholder: e.g., Linux, macOS, Windows
+    validations:
+      required: true
+
+  - type: input
+    id: engine
+    attributes:
+      label: Browser engine (if relevant)
+      description: What engine does it use? Leave blank if not a browser.
+      placeholder: e.g., QtWebEngine, Chromium, Gecko
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why should this be included?
+      description: Explain what value this entry adds and how it fits the curation rules.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: maintained
+    attributes:
+      label: Is it actively maintained?
+      description: Is the project currently maintained with recent activity?
+      options:
+        - Yes, actively maintained
+        - Yes, but with low activity
+        - No, it is unmaintained
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Any other context, caveats, or information for the reviewer.

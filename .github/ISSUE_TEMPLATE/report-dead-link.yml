@@ -1,0 +1,54 @@
+name: Report Dead Link / Outdated Entry
+description: Report a broken link, outdated information, or concern about an existing entry.
+title: "Report: "
+labels:
+  - dead-link
+  - needs-review
+body:
+  - type: input
+    id: entry_name
+    attributes:
+      label: Entry name
+      description: The name of the entry that has an issue.
+      placeholder: e.g., Cromite
+    validations:
+      required: true
+
+  - type: input
+    id: current_url
+    attributes:
+      label: Current URL
+      description: The URL currently listed for this entry.
+      placeholder: e.g., https://github.com/uazo/cromite
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem_type
+    attributes:
+      label: Problem type
+      description: What kind of issue are you reporting?
+      options:
+        - Dead link (404 or unreachable)
+        - Archived project
+        - Wrong description
+        - License changed
+        - Suspicious / Security concern
+        - Duplicate entry
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: Suggested fix
+      description: What should be changed? Include a replacement URL, updated description, or removal recommendation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: Source / Reference
+      description: Link to evidence supporting your report (e.g., project archive notice, new official URL, security advisory).

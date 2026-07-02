@@ -1,0 +1,6 @@
+.worktrees/
+
+# Local planning/audit artifacts — not part of the public list
+/PRD.md
+/TODO.md
+/docs/
